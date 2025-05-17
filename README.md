@@ -14,16 +14,22 @@ The main steps of the project are outlined below:
     * Comparing the distributions of quantitative features for converting and non-converting customers using violin and kernel density estimate (KDE) plots.
     * Exploring the correlation between features suspected to be related to gain deeper understanding of their interactions.
 - **Marketing Funnel Analysis:** Explores user progression for each campaign type(Conversion, Awareness, Retention and Consideration) through each different marketing channels (Email, Social Media, PPC), using interactive bar charts to visualize user drop-off rates at each stage of the funnel.
-- **A/B Testing:**
+- **A/B Testing:** to determine which campaign (Conversion or Retention) performs better using t-test, and test if there are signifcant differences between Age, Gender and Income groups for Retention and Conversion campaigns aslso using t-tests, and then conducted separate one-way ANOVA tests for each campaign type and for each of the following factors: Age Group, Gender, and Income Group.
+- **A/B Testing and Comparative Analysis:** This section focused on evaluating the performance of different campaign strategies and exploring demographic influences on campaign outcomes. Specifically:
+    * **Campaign Performance Comparison:** Independent t-tests were employed to statistically determine if there was a significant difference in the conversion rate between the Conversion and Retention marketing campaigns. Further t-tests were conducted to determine if there was a significant difference in the conversion rate between the Conversion and Retention marketing campaigns on the following demographic profiles :a ge group, gender, and income group.
+    * **Demographic Influence on Campaign Outcome:** To understand how different demographic factors impacted the success of each campaign individually, separate one-way ANOVA tests were performed for each campaign type.
 - **Customer Segmentation via Clustering:** Comparaison of different clustering methods (Kmeans, Agglomerative Clustering, Gaussian Mixture Model and DBSCAN) to segment customers based on relevant behavioral and demographic features, followed by the analysis of these clusters through PCA and t-SNE visualizations, heatmaps, boxplots, KDE plots and radar profiles to understand distinct customer groups. 3 different customer profiles were identified with specific tailored recommendations for each segment.
 - **Predictive Modeling for Conversion:** Focuses on building and comparing classification models (Logistic Regression, Random Forest, XGBoost) to predict the Conversion outcome. This involved the following steps:
     * Preprocessing pipelines with scaling and one-hot encoding.
     * Addressing class imbalance using ADASYN (which worked better than SMOTE and SMOTETOMEK on this dataset).
     * Hyperparameter tuning for each model using GridSearchCV to optimize performance, evaluated using ROC AUC to account for class imbalance.
     * Evaluation of the best models using classic evaluation metrics (AUC, f1 score, precision, recall ...), confusion matrix, ROC curves and Precision-Recall curve.
-- **Feature Importance Analysis with SHAP:** (fix) Utilizes SHAP (SHapley Additive exPlanations) values to understand the impact of different features on the conversion predictions for the best performing models. Visualizations highlight the positive and negative contributions of each feature.
-- **Insights and Recommendations**:
+- **Feature Importance Analysis with SHAP:** Utilizes SHAP (SHapley Additive exPlanations) values to understand the impact of different features on the conversion predictions for all models, to identify customer profiles with higher Conversion rates.
+- **Key Insights, Answers to Core Questions, and Strategic Recommendations:** This section synthesizes the findings from the entire analysis to provide actionable insights. It directly addresses the three primary questions guiding the project:
+    * **Which campaign performs best?** Identifying top-performing campaigns based on conversion rates, funnel efficiency and A/B tests.
+    * **Which customers are likely to convert?** Characterizing the key attributes and behaviors of customer segments with high conversion probabilities, derived from both clustering and SHAP values analysis.
+    * **How can marketing efforts be optimized?** Offering concrete recommendations for improving campaign strategies, targeting specific customer segments, and enhancing the overall marketing funnel based on the main takeaways and insight from each stage of the analysis.
 
 **Repository Overview:**
 
-This repository contains 1 [Jupyter notebook](Notebook.ipynb) and a [condensed report](Summary%20of%20key%20findings%20and%20recommendations.pdf) .
+This repository contains 1 [Jupyter notebook](Notebook.ipynb) and a [condensed report of the main insights](Summary%20of%20key%20findings%20and%20recommendations.pdf) .

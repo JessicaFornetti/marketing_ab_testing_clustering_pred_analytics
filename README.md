@@ -26,4 +26,4 @@ The main steps of the project are outlined below:
 
 **Repository Overview:**
 
-This repository contains 1 [Jupyter notebook](marketing_campaign_analysis_and_prediction.ipynb) and a [condensed report]() .
+This repository contains 1 [Jupyter notebook](Notebook.ipynb) and a [condensed report](Summary%20of%20key%20findings%20and%20recommendations.pdf) .
